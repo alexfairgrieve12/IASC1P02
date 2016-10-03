@@ -1,0 +1,32 @@
+#wrapper{
+  border: purple 3px dashed;
+  margin: 10px 25px 20px 20px;
+  padding: 100px 10px 10px 10px;
+}
+
+.black{
+  color:black;
+  text-align: center;
+}
+
+.green{
+  color:green;
+  text-align: center;
+}
+
+.red{
+  color: red;
+}
+
+.purple{
+  color: purple;
+  text-align: right;
+}
+
+.orange{
+  color:orange;
+}
+
+.yellow{
+  color:yellow
+}

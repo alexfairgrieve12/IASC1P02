@@ -1,0 +1,22 @@
+body{background: blue}
+
+#wrapper{
+  border: black 10px solid;
+  margin: 40px 40px 60px 40px;
+  padding: 10px 10px 10px 10px;
+}
+
+#rapper{
+  border: green 5px dashed;
+  margin: 10px 10px 10px 10px;
+  padding: 5px 5px 5px 5px;
+}
+.red{
+  color:red;
+}
+
+#border{
+  border: yellow 5px dashed;
+  margin: 20px 20px 0px 0px;
+  padding: 10px 10px 10px 10px;
+}
