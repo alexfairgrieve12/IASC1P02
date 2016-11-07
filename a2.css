@@ -1,0 +1,53 @@
+body{nackground-color:black}
+
+.changecolor{
+  color: red
+}
+
+.changesize{
+  font-size: 7px;
+}
+ .changestyle{
+   font-style: italic;
+ }
+
+ #transform{
+   text-transform: uppercase;
+ }
+
+ #p3{
+   position: fixed;
+   left:80px
+ }
+
+#p2{
+  position: relative;
+  Left: 200px
+}
+
+ #p1{
+   position:absolute;
+   left: 20px;
+}
+
+h1, h2, p{color: green}
+
+div .pp {
+  font-style: oblique;
+}
+
+#myContainer {
+  margin: 20px 10% 20px 10%;
+  border: black 3px solid;
+  padding: 10px 20% 10px 20%;
+}
+
+
+
+
+
+
+
+
+
+Demonstrate the concepts of the “Box” model (margin, border, padding, content) at least once
