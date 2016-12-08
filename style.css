@@ -1,0 +1,104 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+#header {
+	position: fixed;
+	color: white;
+	font-size: 22px;
+	background-color: red;
+	width: 100%;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-transform: uppercase;
+}
+
+body {
+	margin: 0;
+	min-height: 1400px;
+	position: relative;
+	padding: 0;
+}
+
+#nav {
+	margin-top: 56px;
+	background-color: green;
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+#content {
+	margin-left: 20%;
+	padding-bottom: 100px;
+}
+
+ul {
+	margin: 0;
+	list-style-type: none;
+	padding: 0;
+	color: white;
+	text-transform: uppercase;
+}
+
+ul a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	padding-left: 10px;
+	text-transform: lowercase;
+}
+
+#header a {
+	text-decoration: none;
+	color: white;
+}
+
+#header a:hover {
+	color: black;
+}
+
+a:hover {
+	color: black;
+}
+
+li {
+	padding: 10px 30px 10px 30px;
+}
+
+.listHeader {
+	font-size: 25px;
+	border-top: solid 1px black;
+}
+
+img {
+	display: block;
+	margin: auto;
+	height: 460px;
+	width: 710px;
+	padding-top: 80px;
+}
+
+#title {
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+
+.text {
+	padding: 0 50px 0 50px;
+	font-size: 20px;
+	max-width: 1500px;
+}
+
+#footer {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: yellow;
+	text-align: center;
+	font-size: 14px;
+	position: absolute;
+	bottom: 0;
+}
