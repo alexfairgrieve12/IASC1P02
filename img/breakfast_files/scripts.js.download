@@ -1,0 +1,53 @@
+jQuery(document).ready(function($) {
+
+// Lightbox Stuff
+$(function() {
+    $('.lightbox-close').click(function(e){
+        e.preventDefault();
+        $('#cover, .lightbox').fadeOut();
+
+        $(document).bind(
+            'touchmove',
+            function(e) {
+                e.preventDefault();
+            }
+        );
+    });
+
+    $('#cover, .lightbox-close-desktop').click(function(e){
+        e.preventDefault();
+        $('#cover, .lightbox').fadeOut();
+    });
+
+    $('.popup-link').click(function(e){
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        $('#cover, .lightbox.popup').fadeIn();
+
+        $(document).unbind(
+            'touchmove'
+        );
+    });
+        //Accordion button
+        $('.accordion-button').click(function () {
+            if ($(this).is('.accordion-button-selected')) {
+                $('.accordion-content').slideUp('slow');
+                $(this).removeClass('accordion-button-selected').addClass('accordion-button');
+            }
+            else {
+                $('.accordion-content').slideUp('slow');
+                $(this).next().slideDown('slow');
+                $('.accordion-button-selected').removeClass('accordion-button-selected').addClass('accordion-button');
+                $(this).removeClass('accordion-button').addClass('accordion-button-selected');
+            }
+        });
+
+        //HIDE THE DIVS ON PAGE LOAD
+        $(".accordion-content").hide();
+
+    });
+
+
+});

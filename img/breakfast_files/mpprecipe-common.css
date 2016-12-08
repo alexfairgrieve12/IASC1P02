@@ -1,0 +1,402 @@
+/* ZLRecipe-Std.css
+A base stylesheet for the MealPlannerPro Recipe Plugin
+Plugin URI: http://www.mealplannerpro.com/
+Plugin GitHub: https://github.com/Ziplist/recipe_plugin
+Plugin Description: A plugin that adds all the necessary microdata to your recipes, so they will show up in Google's Recipe Search
+Author: MealPlannerPro.com
+Author URI: http://www.mealplannerpro.com/
+License: GPLv3 or later, unless specified
+
+Copyright 2011, 2012, 2013, 2014 MealPlannerPro, Inc.
+*/
+
+/* RESETS */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* svn pushed test comment from quinn */
+
+#mpprecipe-container img {
+	display:inline;
+	background:none;
+}
+#mpprecipe-container ul, #mpprecipe-container ol {
+	list-style-image:none;
+}
+
+#mpprecipe-container html, #mpprecipe-container body, #mpprecipe-container div, #mpprecipe-container span, #mpprecipe-container applet, #mpprecipe-container object, #mpprecipe-container iframe,
+#mpprecipe-container h1, #mpprecipe-container h2, #mpprecipe-container h3, #mpprecipe-container h4, #mpprecipe-container h5, #mpprecipe-container h6, #mpprecipe-container p, #mpprecipe-container blockquote, #mpprecipe-container pre,
+#mpprecipe-container a, #mpprecipe-container abbr, #mpprecipe-container acronym, #mpprecipe-container address, #mpprecipe-container big, #mpprecipe-container cite, #mpprecipe-container code,
+#mpprecipe-container del, #mpprecipe-container dfn, #mpprecipe-container em, #mpprecipe-container img, #mpprecipe-container ins, #mpprecipe-container kbd, #mpprecipe-container q, #mpprecipe-container s, #mpprecipe-container samp,
+#mpprecipe-container small, #mpprecipe-container strike, #mpprecipe-container strong, #mpprecipe-container sub, #mpprecipe-container sup, #mpprecipe-container tt, #mpprecipe-container var,
+#mpprecipe-container b, #mpprecipe-container u, #mpprecipe-container i, #mpprecipe-container center,
+#mpprecipe-container dl, #mpprecipe-container dt, #mpprecipe-container dd, #mpprecipe-container ol, #mpprecipe-container ul, #mpprecipe-container li,
+#mpprecipe-container fieldset, #mpprecipe-container form, #mpprecipe-container label, #mpprecipe-container legend,
+#mpprecipe-container table, #mpprecipe-container caption, #mpprecipe-container tbody, #mpprecipe-container tfoot, #mpprecipe-container thead, #mpprecipe-container tr, #mpprecipe-container th, #mpprecipe-container td,
+#mpprecipe-container article, #mpprecipe-container aside, #mpprecipe-container canvas, #mpprecipe-container details, #mpprecipe-container embed, #mpprecipe-container figure,
+#mpprecipe-container figcaption, #mpprecipe-container footer, #mpprecipe-container header, #mpprecipe-container hgroup, #mpprecipe-container menu,
+#mpprecipe-container nav, #mpprecipe-container output, #mpprecipe-container ruby, #mpprecipe-container section, #mpprecipe-container summary,
+#mpprecipe-container time, #mpprecipe-container mark, #mpprecipe-container audio, #mpprecipe-container video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+#mpprecipe-container strong { font-weight: bold; }
+#mpprecipe-container em {     font-style:  italic; }
+
+/* HTML5 display-role reset for older browsers */
+#mpprecipe-container article, #mpprecipe-container aside, #mpprecipe-container details, #mpprecipe-container figcaption, #mpprecipe-container figure, #mpprecipe-container 
+footer, #mpprecipe-container header, #mpprecipe-container hgroup, #mpprecipe-container menu, #mpprecipe-container nav, #mpprecipe-container section {
+	display: block;
+}
+#mpprecipe-container blockquote:before, #mpprecipe-container blockquote:after,
+#mpprecipe-container q:before, #mpprecipe-container q:after {
+	content: '';
+	content: none;
+}
+#mpprecipe-container table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+.nutbox img {
+	display:inline;
+}
+.nutbox ul, .nutbox ol {
+	list-style-image:none;
+}
+
+.nutbox html, .nutbox body, .nutbox div, .nutbox span, .nutbox applet, .nutbox object, .nutbox iframe,
+.nutbox h1, .nutbox h2, .nutbox h3, .nutbox h4, .nutbox h5, .nutbox h6, .nutbox p, .nutbox blockquote, .nutbox pre,
+.nutbox a, .nutbox abbr, .nutbox acronym, .nutbox address, .nutbox big, .nutbox cite, .nutbox code,
+.nutbox del, .nutbox dfn, .nutbox em, .nutbox img, .nutbox ins, .nutbox kbd, .nutbox q, .nutbox s, .nutbox samp,
+.nutbox small, .nutbox strike, .nutbox strong, .nutbox sub, .nutbox sup, .nutbox tt, .nutbox var,
+.nutbox b, .nutbox u, .nutbox i, .nutbox center,
+.nutbox dl, .nutbox dt, .nutbox dd, .nutbox ol, .nutbox ul, .nutbox li,
+.nutbox fieldset, .nutbox form, .nutbox label, .nutbox legend,
+.nutbox table, .nutbox caption, .nutbox tbody, .nutbox tfoot, .nutbox thead, .nutbox tr, .nutbox th, .nutbox td,
+.nutbox article, .nutbox aside, .nutbox canvas, .nutbox details, .nutbox embed, .nutbox figure,
+.nutbox figcaption, .nutbox footer, .nutbox header, .nutbox hgroup, .nutbox menu,
+.nutbox nav, .nutbox output, .nutbox ruby, .nutbox section, .nutbox summary,
+.nutbox time, .nutbox mark, .nutbox audio, .nutbox video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+.nutbox article, .nutbox aside, .nutbox details, .nutbox figcaption, .nutbox figure, .nutbox 
+footer, .nutbox header, .nutbox hgroup, .nutbox menu, .nutbox nav, .nutbox section {
+	display: block;
+}
+.nutbox ol, .nutbox ul {
+	list-style: none;
+}
+.nutbox blockquote, .nutbox q {
+	quotes: none;
+}
+.nutbox blockquote:before, .nutbox blockquote:after,
+.nutbox q:before, .nutbox q:after {
+	content: '';
+	content: none;
+}
+.nutbox table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END RESETS */
+
+/* BASE */
+
+.mpp-top {
+overflow: initial !important;
+}
+
+.mpp-recipe-author {
+    float: right;
+    font-size: 16px !important;
+    margin-top: -8px !important;
+}
+#mpprecipe-yield {
+    margin-top: -4px !important;
+
+}
+#mpprecipe-container p {
+  line-height: 1.2em;
+  margin: 1em 0;
+}
+#mpprecipe-container ul {
+  margin: 1em;
+  padding: 0 0 0 2.4em;
+}
+#mpprecipe-container ol {
+  list-style-type: decimal;
+  margin: 1em 0;
+  padding: 0 0 0 3em;
+}
+/* END BASE */
+
+/* TYPOGRAPHY */
+#mpprecipe-container .heading-one, #mpprecipe-container .h-1 { font-size: 2em; line-height: 1.3em; }
+#mpprecipe-container .heading-two, #mpprecipe-container .h-2 { font-size: 1.75em; }
+#mpprecipe-container .heading-three, #mpprecipe-container .h-3 { font-size: 1.5em }
+#mpprecipe-container .heading-four, #mpprecipe-container .h-4 { font-size: 1.25em }
+
+#mpprecipe-container .bold, #mpprecipe-container .strong { font-weight: bold; }
+#mpprecipe-container .italic, #mpprecipe-container .em { font-style: italic; }
+
+#mpprecipe-container .serif { font-family: palatino, 'palatino linotype', Georgia, 'Times New Roman', Times, serif; }
+#mpprecipe-container .sans-serif { font-family: 'helvetica neue', helvetica, arial, verdana, sans-serif; }
+
+.text-align-center, .t-a-c { text-align: center; }
+/* END TYPOGRAPHY */
+
+/* FORMATTING */
+#mpprecipe-container .padding-all, #mpprecipe-container .p-a { padding: 1em; }
+#mpprecipe-container .padding-top, #mpprecipe-container .p-t { padding-top: 1em; }
+#mpprecipe-container .padding-right, #mpprecipe-container .p-r { padding-right: 1em; }
+#mpprecipe-container .padding-bottom, #mpprecipe-container .p-b { padding-bottom: 1em; }
+#mpprecipe-container .padding-left, #mpprecipe-container .p-l { padding-left: 1em; }
+
+#mpprecipe-container .float-left, #mpprecipe-container .fl-l { float: left; }
+#mpprecipe-container .float-right, #mpprecipe-container .fl-r { float: right; }
+
+#mpprecipe-container .width-50, #mpprecipe-container .w-50 { width: 50%; }
+
+#mpprecipe-container .clear, #mpprecipe-container .zlclear { clear: both; }
+
+#mpprecipe-container .texthide { text-indent: -9999px; }
+#mpprecipe-container .hide-card { display: none; } /* used to hide things in the recipe card (web) view */
+
+#mpprecipe-container .border-bottom, #mpprecipe-container .b-b { border-bottom: 1px solid #000; }
+#mpprecipe-container .border-top, #mpprecipe-container .b-t { border-top: 1px solid #000; }
+/* END FORMATTING */
+
+/* SPECIFIC ELEMENT STYLES */
+#mpprecipe-container { padding: 10px; }
+#mpprecipe-container #mpprecipe-title { padding-bottom: 0.5em; clear:both; }
+#mpprecipe-container .mpprecipe-print-link {
+	padding-left: 0.5em;
+	margin-top: 5px;
+}
+#mpprecipe-container .mpp-recipe-link {
+	margin-top: 5px;
+}
+
+#mpprecipe-container .meta, #mpprecipe-container .zlmeta {
+  font-size: 0.85em;
+  font-weight: bold;
+}
+#mpprecipe-container .meta span, #mpprecipe-container .zlmeta span { font-weight: normal; }
+
+/**
+#mpprecipe-rating .rating {
+  background: url('http://ab-assets.mealplannerpro.com.s3.amazonaws.com/star-rating.gif') no-repeat scroll 0 0;
+  display: inline-block;
+  height: 14px;
+  text-indent: -9999px;
+  width: 80px;
+}
+*/
+#mpprecipe-container #mpprecipe-rating .rating-5 { background-position: 0 0; }
+#mpprecipe-container #mpprecipe-rating .rating-45 { background-position: 0 -14px; }
+#mpprecipe-container #mpprecipe-rating .rating-4 { background-position: 0 -28px; }
+#mpprecipe-container #mpprecipe-rating .rating-35 { background-position: 0 -42px; }
+#mpprecipe-container #mpprecipe-rating .rating-3 { background-position: 0 -56px; }
+#mpprecipe-container #mpprecipe-rating .rating-25 { background-position: 0 -70px; }
+#mpprecipe-container #mpprecipe-rating .rating-2 { background-position: 0 -84px; }
+#mpprecipe-container #mpprecipe-rating .rating-15 { background-position: 0 -98px; }
+#mpprecipe-container #mpprecipe-rating .rating-1 { background-position: 0 -112px; }
+#mpprecipe-container #mpprecipe-rating .rating-05 { background-position: 0 -126px; }
+#mpprecipe-container #mpprecipe-rating .rating-0 { background-position: 0 -140px; }
+
+#mpprecipe-container #mpprecipe-ingredients-list, #mpprecipe-container #mpprecipe-instructions-list { line-height: 1.5em; }
+
+#mpprecipe-container #mpprecipe-ingredients-list .ingredient-label,
+#mpprecipe-container #mpprecipe-instructions-list .instruction-label {
+  position: relative;
+  margin-top: 5px;
+  font-weight: bold;
+}
+#mpprecipe-container ul #mpprecipe-ingredients-list .ingredient-label,
+#mpprecipe-container ul #mpprecipe-instructions-list .instruction-label,
+#mpprecipe-container ol #mpprecipe-ingredients-list .ingredient-label,
+#mpprecipe-container ol #mpprecipe-instructions-list .instruction-label {
+  left: -10px;
+}
+
+#mpprecipe-container #mpprecipe-instructions-list,
+#mpprecipe-container #mpprecipe-ingredients-list 
+{ margin: 0; }
+
+#mpprecipe-container #mpprecipe-notes-list {
+	margin: 0px;
+	padding: 0px;
+}
+
+#mpprecipe-container .img-desc-wrap {
+  background-color: #efefef;
+  padding-top: 1px;
+}
+
+#mpprecipe-container .img-desc-wrap img.photo { width:545px; }
+#mpprecipe-container .img-desc-wrap #mpprecipe-summary { padding:0 10px 10px; }
+#mpprecipe-container #mpprecipe-summary .summary { margin: 10px 0; }
+
+#mpprecipe-container .mpp-linkback { font-size: 0.9em; color: #aaa; margin-top: 4em; }
+#mpprecipe-container #mpp-printed-permalink { display:none; font-size: 0.7em; }
+#mpprecipe-container #mpp-printed-copyright-statement { display:none; font-size: 0.9em; }
+
+.mpprecipe-container-border #mpprecipe-beacon { display:none; }
+
+/* END SPECIFIC ELEMENT STYLES */
+
+.mpp-rmvd {
+	height: 27px;
+	width: 105px;
+	visibility: hidden;
+	pointer-events: none;
+	cursor: default;
+}
+
+/* Quinn Revisions */
+#mpp-recipe-link-10 {
+width:20px !important;
+}
+/*#mpprecipe-instructions-list {
+margin-left: 0;
+padding-left: 0;
+counter-reset: item;
+}
+
+#mpprecipe-instructions-list li:before {
+display: inline-block;
+content: counter(item) ".";
+counter-increment: item;
+width: 2em;
+margin-left: -2em;
+font-weight:800;
+font-size:20px;
+position:relative;
+top:3px;
+}*/
+#mpprecipe-ingredients-list li, 
+#mpprecipe-instructions-list li {
+margin-bottom: 1em;
+margin-left: 1.5em;
+}
+#mpprecipe-container ol {
+	padding:0;
+}
+.zlmeta p {text-transform:uppercase;text-align:center;}
+.zlmeta span {text-transform:initial;display:block;}
+.zlmeta .width-50 {
+width:100% !important;
+}
+
+#mpprecipe-ingredients {
+	clear:both;
+}
+
+#mpprecipe-container .img-desc-wrap {
+background:none !important;
+}
+
+#mpprecipe-container
+{
+    text-align : left;
+}
+
+
+
+
+/* Nutrition Box */
+
+.nutbox {
+	border:double black 1px;
+	padding:25px;
+	margin-bottom:25px;
+	border: double;
+	text-align:center;
+	font-family:"Lato";
+}
+.nut-toprow img {
+	float:left;
+	width:26%;
+	margin-right:4%;
+}
+.nut-topouter {
+	float:left;
+	width:15.5%;
+	margin:0 1% !important;
+}
+.nut-message {
+	font-size:18px !important;
+}
+.nut-circle {
+	background:#74c48c;
+	padding:30px;
+	border-radius:500px;
+}
+.nut-tags a {
+	color:black;
+	background:#d1d3d4;
+	text-decoration:none;
+	padding: 3px 25px;
+	border-radius:3px;
+	font-size:16px !important;
+	white-space: nowrap;
+    margin: 2px 0px !important;
+    display: inline-block;
+}
+.nut-tags a:hover {
+	background:#aaa;
+}
+
+
+@media (max-width:767px) {
+	.nut-toprow img {
+		width:50%;
+		margin-right:25%;
+		margin-left:25%;
+		margin-bottom:25px;
+	}
+	.nut-topouter {
+		float:left;
+		width:48%;
+		margin:0 1% !important;
+	}
+	.nut-message {
+		font-size:16px !important;
+	}
+}
+
+
+@media (max-width:400px) {
+	.nut-tags a {
+		font-size:14px !important;
+	}
+}
+
+.mpprecipe {
+    text-align: left !important;
+}
+
+
+@media print {
+    .adunit, .adunitlabel, .adunitwrapper 
+    {
+        display : none !important;
+    }
+}

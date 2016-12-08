@@ -1,0 +1,15 @@
+.nutbox {
+    border: none !important;
+   	margin: 0 !important;
+    padding: 0 20px !important;
+        font-size: 15px !important;
+}
+.nut-message {
+    font-size: 15px !important;
+}
+.nut-toprow img {
+    float: left;
+    width: 16%;
+    margin-right: 8%;
+    margin-top: 9px;
+}

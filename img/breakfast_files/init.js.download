@@ -1,0 +1,189 @@
+//rexall_728x90_flu_season_2
+var WIDTH = 728;
+var HEIGHT = 90;
+var EXIT = "exit";
+var ANIMATE = function() {
+	var container = document.getElementById("container");
+	var background = document.getElementById("background");
+	var background_two = document.getElementById("background_two");
+	var background_three = document.getElementById("background_three");
+	var text_almosthere = document.getElementById("text_almosthere");
+	var text_protect = document.getElementById("text_protect");
+	var text_getflushot = document.getElementById("text_getflushot");
+	var needle = document.getElementById("needle");
+	var logo = document.getElementById("logo");
+	var text_legal = document.getElementById("text_legal");
+
+	// [START] Frames
+	var frameMaster = function() {
+		TweenLite.set(background, { opacity: 1, left: 0, top: 0 });
+		TweenLite.set(text_almosthere, { opacity: 1, left: 314, top: 24 });
+		TweenLite.set(text_protect, { opacity: 0, left: 280, top: 24 });
+		TweenLite.set(background_two, { left: 0, top: -90 });
+		TweenLite.set(background_three, { left: -728, top: 0 });
+		TweenLite.set(text_getflushot, { opacity: 0, left: 216, top: 8 });
+		TweenLite.set(needle, {left: -152, top: 28 });
+		TweenLite.set(logo, { opacity: 0, top: 10 });
+		TweenLite.set(text_legal, { opacity: 0, left: 121, top: 55 });
+
+		TweenLite.set(container, { visibility: "visible" });
+
+		frameAlmostHere();
+	}
+
+	var frameAlmostHere = function() {
+		TweenLite.to(text_almosthere, 0.25, { delay: 3.0, opacity: 0, ease: Linear.easeNone });
+		TweenLite.to(text_protect, 0.25, { delay: 2.75, opacity: 1, ease: Linear.easeNone });
+		//TweenLite.to(text_protect, 0.25, { delay: 6.75, opacity: 0, ease: Linear.easeNone });
+		//TweenLite.to(background, 0.25, { delay: 6.75, opacity: 0, ease: Linear.easeNone });
+		TweenLite.to(background_two, 0.65, { delay: 5.25, top: 0, ease: Linear.easeNone });
+		TweenLite.to(background_three, 1.5, { delay: 4.75, left: 0, ease: Linear.easeNone });
+		TweenLite.to(text_getflushot, 0.5, { delay: 7.25, opacity: 1, ease: Linear.easeNone });
+		TweenLite.to(needle, 0.75, { delay: 7.5, left: 0, ease: Linear.easeNone });
+		TweenLite.to(logo, 0.65,  { delay: 8, opacity: 1, ease: Linear.easeNone });
+		TweenLite.to(text_legal, 0.5, { delay: 8.45, opacity: 1, ease: Linear.easeNone });
+	}
+
+	frameMaster();
+	// [END] Frames
+};
+
+var IMAGES = "./";
+var PRELOAD = [
+	{
+		type : "script",
+		src : "//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"
+	}, {
+		type : "script",
+		src : "//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"
+	}, {
+		type : "script",
+		src : "//cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"
+	}, {
+		type : "image",
+		src : "background.jpg",
+		id : "background"
+	}, {
+		type : "image",
+		src : "background_2.png",
+		id : "background_two"
+	}, {
+		type : "image",
+		src : "background_3.png",
+		id : "background_three"
+	}, {
+		type : "image",
+		src : "text_almosthere.png",
+		id : "text_almosthere"
+	}, {
+		type : "image",
+		src : "text_protect.png",
+		id : "text_protect"
+	}, {
+		type : "image",
+		src : "text_getflushot.png",
+		id : "text_getflushot"
+	}, {
+		type : "image",
+		src : "needle.png",
+		id : "needle"
+	}, {
+		type : "image",
+		src : "rexall_logo.png",
+		id : "logo"
+	}, {
+		type : "image",
+		src : "text_legal.png",
+		id : "text_legal"
+	}
+];
+
+var enable = function() {
+	var size = {
+		width: WIDTH,
+		height: HEIGHT
+	};
+
+	var assets = PRELOAD;
+	var animate = ANIMATE;
+
+	var show = function() {
+		document.getElementById("container").style.visibility = "visible";
+	}
+	var listeners = function() {
+		document.getElementById("cta").onclick = exit;
+	}
+	var head = document.getElementsByTagName("head")[0];
+	var body = document.getElementsByTagName("body")[0];
+	var container = document.getElementById("container");
+	var cta = document.getElementById("cta");
+	var self = this;
+
+	var success = function(asset) {
+		if ("image" == asset.type) {
+			var element = document.getElementById(asset.id);
+			element.style.width = asset.width + "px";
+			element.style.height = asset.height + "px";
+			element.style.backgroundImage = "url('" + asset.src + "')";
+		}
+		preload();
+	}
+
+	var preload = function() {
+		if (assets.length) {
+			var asset = assets.pop();
+			//console.log("asset", asset);
+
+			if ("script" == asset.type) {
+				var script = document.createElement("script");
+				script.type = "text/javascript";
+				script.onload = script.onreadystatechange = function() {
+					success(asset);
+					//console.log("script.onload", asset);
+				}
+				script.src = asset.src;
+				head.appendChild(script);
+			}
+
+			if ("image" == asset.type) {
+				var image = document.createElement("img");
+				asset.src = IMAGES + asset.src;
+				image.onload = function() {
+					asset.width = image.width;
+					asset.height = image.height;
+					image.style.display = "none"; // add but don't show
+					success(asset);
+					//console.log("image.onload", this.width, this.height);
+				}
+				image.src = asset.src;
+				container.appendChild(image);
+			}
+		} else {
+			setTimeout(function() {
+				complete.call(self);
+			}, 500);
+		};
+	};
+
+	var complete = function() {
+		listeners();
+		animate();
+	};
+
+	var setup = function() {
+		container.style.width = cta.style.width = WIDTH + "px";
+		container.style.height = cta.style.height = HEIGHT + "px";
+	};
+
+	var initialize = function() {
+		eyeBuild.initialize();
+		setup();
+		preload();
+	};
+
+	var exit = function() {
+		eyeBuild.doClick(0);
+	};
+
+	initialize();
+};

@@ -1,0 +1,30 @@
+window.SparrowConfig = {
+  "title": "Ad Network",
+  "origin": "ad-network",
+  "infinityID": true,
+  "events": [
+    {
+      "type": [
+        "click"
+      ],
+      "selector": "a"
+    },
+    {
+      "type": [
+        "click"
+      ],
+      "selector": ".share-item a",
+      "options": {
+        "_t": "share"
+      }
+    },
+    {
+      "type": [
+        "scroll",
+        "pageview"
+      ],
+      "selector": "window"
+    }
+  ],
+  "timestamp": "2016-06-02T15:21:41.942Z"
+};
